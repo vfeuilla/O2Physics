@@ -1377,7 +1377,8 @@ struct DQFilterPPTask {
       } else {
         totalEventsTriggered++;
         for (int i = 0; i < fNBarrelCuts + fNMuonCuts; i++) {
-            if (fFiltersMap[collision.globalIndex()] & (uint32_t(1) << i)) fStats->Fill(static_cast<float>(i));
+          if (fFiltersMap[collision.globalIndex()] & (uint32_t(1) << i))
+            fStats->Fill(static_cast<float>(i));
         }
         eventFilter(fFiltersMap[collision.globalIndex()]);
         auto dqDecisions = fCEFPfilters[collision.globalIndex()];
