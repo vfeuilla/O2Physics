@@ -235,18 +235,18 @@ AnalysisCompositeCut* o2::aod::dqcuts::GetCompositeCut(const char* cutName)
   if (!nameStr.compare("jpsiO2MCdebugCuts_TEST_1")) {
     cut->AddCut(GetAnalysisCut("jpsiStandardKine"));
     cut->AddCut(GetAnalysisCut("electronStandardQualityForO2MCdebug"));
-    cut->AddCut(GetAnalysisCut("jpsi_TPCPID_TEST_2")); //No pion rejection at high p and asymmetrical e selection with no correction maps
+    cut->AddCut(GetAnalysisCut("jpsi_TPCPID_TEST_2")); // No pion rejection at high p and asymmetrical e selection with no correction maps
 
     return cut;
   }
   if (!nameStr.compare("jpsiO2MCdebugCuts_TEST_1_Corr")) {
     cut->AddCut(GetAnalysisCut("jpsiStandardKine"));
     cut->AddCut(GetAnalysisCut("electronStandardQualityForO2MCdebug"));
-    cut->AddCut(GetAnalysisCut("jpsi_TPCPID_TEST_2_Corr")); //No pion rejection at high p and asymmetrical e selection with  correction maps
+    cut->AddCut(GetAnalysisCut("jpsi_TPCPID_TEST_2_Corr")); // No pion rejection at high p and asymmetrical e selection with  correction maps
 
     return cut;
   }
-    
+
   // With p > 1.5 GeV/c as primary cut
   if (!nameStr.compare("jpsiO2MCdebugCuts_TEST_1")) {
     cut->AddCut(GetAnalysisCut("jpsiStandardKine4"));
@@ -265,14 +265,14 @@ AnalysisCompositeCut* o2::aod::dqcuts::GetCompositeCut(const char* cutName)
   if (!nameStr.compare("jpsiO2MCdebugCuts_TEST_1")) {
     cut->AddCut(GetAnalysisCut("jpsiStandardKine4"));
     cut->AddCut(GetAnalysisCut("electronStandardQualityForO2MCdebug"));
-    cut->AddCut(GetAnalysisCut("jpsi_TPCPID_TEST_2")); //No pion rejection at high p and asymmetrical e selection with no correction maps
+    cut->AddCut(GetAnalysisCut("jpsi_TPCPID_TEST_2")); // No pion rejection at high p and asymmetrical e selection with no correction maps
 
     return cut;
   }
   if (!nameStr.compare("jpsiO2MCdebugCuts_TEST_1_Corr")) {
     cut->AddCut(GetAnalysisCut("jpsiStandardKine4"));
     cut->AddCut(GetAnalysisCut("electronStandardQualityForO2MCdebug"));
-    cut->AddCut(GetAnalysisCut("jpsi_TPCPID_TEST_2_Corr")); //No pion rejection at high p and asymmetrical e selection with  correction maps
+    cut->AddCut(GetAnalysisCut("jpsi_TPCPID_TEST_2_Corr")); // No pion rejection at high p and asymmetrical e selection with  correction maps
 
     return cut;
   }
@@ -2853,7 +2853,7 @@ AnalysisCut* o2::aod::dqcuts::GetAnalysisCut(const char* cutName)
     cut->AddCut(VarManager::kTPCnSigmaPr, 3.0, 999, false, VarManager::kP, 0.0, 2.0);
     cut->AddCut(VarManager::kTPCnSigmaPr, 0, 999, false, VarManager::kP, 2.0, 999);
   }
-    
+
   // end of new tests cuts
 
   if (!nameStr.compare("lmee_TPCPID_debug1")) {
