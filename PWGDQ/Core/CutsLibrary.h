@@ -21,6 +21,82 @@
 #include "PWGDQ/Core/AnalysisCompositeCut.h"
 #include "PWGDQ/Core/VarManager.h"
 
+// ///////////////////////////////////////////////
+//   These are the Cuts used in the CEFP Task   //
+//   to select tracks in the event selection    //
+// ///////////////////////////////////////////////
+//
+// Electron 2022 cuts :
+//    - Single e pT > 1.0 GeV/c
+//    - Single e 𝛈 = [-0.9 ; 0.9]
+//    - Is SPD Any : yes
+//    - TPC 𝝌2 < 4.0
+//    - TPC N Clusters = [70 ; 160]
+//    - n-𝛔e = [-4.0 ; 4.0]
+//    - n-𝛔𝜋 > 2.5
+//    - n-𝛔p > 2.5
+//    - PID post-calibration : Yes
+//    - Track-collision association : No
+//  For the dielectron Cut : pairNoCut
+//    mee > 0 GeV/c2
+//
+// Electron 2023 & 2024 cuts :
+//    - Single e pT > 1.0 GeV/c
+//    - Single e 𝛈 = [-0.9 ; 0.9]
+//    - Is SPD Any : yes
+//    - TPC 𝝌2 < 4.0
+//    - TPC N Clusters = [70 ; 160]
+//    - n-𝛔e = [-4.0 ; 4.0]
+//    - n-𝛔𝜋 > 2.5
+//    - n-𝛔p > 2.5
+//    - PID post-calibration : No
+//    - Track-collision association : Yes
+//  For the dielectron Cut : pairMassLow5
+//    mee > 1.8 GeV/c2
+//
+// Low Mass electrons 2023 & 2024 cuts :
+//    - Single e pT > 0.4 GeV/c
+//    - Single e 𝛈 = [-0.8 ; 0.8]
+//    - Is SPD Any : yes
+//    - TPC 𝝌2 < 4.0
+//    - ITS 𝝌2 < 6.0
+//    - TPC N Clusters = [70 ; 170]
+//    - ITS N Clusters = [3.5 ; 7.5]
+//    - n-𝛔e = [-4.0 ; 4.0]
+//    - n-𝛔𝜋 > 3.5 for 0.0 < pIN < 2.0
+//    - n-𝛔p > 2.5 for 2.0 < pIN < 1e+10
+//    - n-𝛔e TOF = [-4.0 ; 4.0] for 0.3 < pIN < 1e+10
+//    - PID post-calibration : No
+//    - Track-collision association : Yes
+//  For the dielectron Cut : 
+//    - Intermediate Mass Range ee trigger : mee > 1.3 GeV/c2 (pairMass1_3)
+//    - High Mass Range ee trigger : mee > 3.5 GeV/c2 (pairMassLow12)
+//
+//    Muons Cuts 2022 :
+//     - Single 𝛍 Low (High) pT > 0.7 (4.0) GeV/c
+//     - Single 𝛍 𝛈 = [-4.0 ; -2.5]
+//     - Rabs = [17.6 ; 89.5]
+//     - p x DCA = ~6 𝛔p x DCA
+//     - Matching MCH-MID : No
+//     - Track-collision association : No
+//    For the dimuon cut
+//     m𝛍𝛍 > 1.8 GeV/c2
+//
+//    Muons Cuts 2023 & 2024 :
+//     - Single 𝛍 Low (High) pT > 0.7 (20.0) GeV/c
+//     - Single 𝛍 𝛈 = [-4.0 ; -2.5]
+//     - Rabs = [17.6 ; 89.5]
+//     - p x DCA = ~10 𝛔p x DCA
+//     - Matching MCH-MID : Yes
+//     - Track-collision association : Yes
+//    For the dimuon cut
+//     m𝛍𝛍 > 1.8 GeV/c2
+//  
+//  
+// ///////////////////////////////////////////////
+//           End of Cuts for CEFP               //
+// ///////////////////////////////////////////////
+
 namespace o2::aod
 {
 namespace dqcuts
