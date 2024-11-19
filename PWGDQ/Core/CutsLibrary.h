@@ -1,6 +1,6 @@
 // Copyright 2019-2020 CERN and copyright holders of ALICE O2.
-// See https://alice-o2.web.cern.ch/copyright for details of the copyright holders.
-// All rights not expressly granted are reserved.
+// See https://alice-o2.web.cern.ch/copyright for details of the copyright
+// holders. All rights not expressly granted are reserved.
 //
 // This software is distributed under the terms of the GNU General Public
 // License v3 (GPL Version 3), copied verbatim in the file "COPYING".
@@ -15,11 +15,11 @@
 #ifndef PWGDQ_CORE_CUTSLIBRARY_H_
 #define PWGDQ_CORE_CUTSLIBRARY_H_
 
+#include "PWGDQ/Core/AnalysisCompositeCut.h"
+#include "PWGDQ/Core/AnalysisCut.h"
+#include "PWGDQ/Core/VarManager.h"
 #include <string>
 #include <vector>
-#include "PWGDQ/Core/AnalysisCut.h"
-#include "PWGDQ/Core/AnalysisCompositeCut.h"
-#include "PWGDQ/Core/VarManager.h"
 
 // ///////////////////////////////////////////////
 //   These are the Cuts used in the CEFP Task   //
@@ -68,7 +68,7 @@
 //    - n-𝛔e TOF = [-4.0 ; 4.0] for 0.3 < pIN < 1e+10
 //    - PID post-calibration : No
 //    - Track-collision association : Yes
-//  For the dielectron Cut : 
+//  For the dielectron Cut :
 //    - Intermediate Mass Range ee trigger : mee > 1.3 GeV/c2 (pairMass1_3)
 //    - High Mass Range ee trigger : mee > 3.5 GeV/c2 (pairMassLow12)
 //
@@ -91,20 +91,18 @@
 //     - Track-collision association : Yes
 //    For the dimuon cut
 //     m𝛍𝛍 > 1.8 GeV/c2
-//  
-//  
+//
+//
 // ///////////////////////////////////////////////
 //           End of Cuts for CEFP               //
 // ///////////////////////////////////////////////
 
-namespace o2::aod
-{
-namespace dqcuts
-{
-AnalysisCompositeCut* GetCompositeCut(const char* cutName);
-AnalysisCut* GetAnalysisCut(const char* cutName);
+namespace o2::aod {
+namespace dqcuts {
+AnalysisCompositeCut *GetCompositeCut(const char *cutName);
+AnalysisCut *GetAnalysisCut(const char *cutName);
 } // namespace dqcuts
 } // namespace o2::aod
 
-AnalysisCompositeCut* o2::aod::dqcuts::GetCompositeCut(const char* cutName);
+AnalysisCompositeCut *o2::aod::dqcuts::GetCompositeCut(const char *cutName);
 #endif // PWGDQ_CORE_CUTSLIBRARY_H_
