@@ -97,12 +97,14 @@
 //           End of Cuts for CEFP               //
 // ///////////////////////////////////////////////
 
-namespace o2::aod {
-namespace dqcuts {
-AnalysisCompositeCut *GetCompositeCut(const char *cutName);
-AnalysisCut *GetAnalysisCut(const char *cutName);
+namespace o2::aod
+{
+namespace dqcuts
+{
+AnalysisCompositeCut* GetCompositeCut(const char* cutName);
+AnalysisCut* GetAnalysisCut(const char* cutName);
 } // namespace dqcuts
 } // namespace o2::aod
 
-AnalysisCompositeCut *o2::aod::dqcuts::GetCompositeCut(const char *cutName);
+AnalysisCompositeCut* o2::aod::dqcuts::GetCompositeCut(const char* cutName);
 #endif // PWGDQ_CORE_CUTSLIBRARY_H_
